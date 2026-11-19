@@ -28,3 +28,5 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Signing access is link-based (no login): secret tokens in `sign_documents.admin_token` and `sign_signers.token`; tables have no client policies and are only reached via server functions in `src/lib/signing.functions.ts` using the admin client. Why: each signer gets a private link without accounts.
